@@ -15,6 +15,8 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('/desafio','WelcomeController@desafio');
 
+Route::post('peoples','PeoplesController@store');
+
 Route::get('/resultado/{key}','PeoplesController@result');
 
 Route::group(array('before' => 'auth'), function()

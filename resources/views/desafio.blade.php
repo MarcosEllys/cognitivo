@@ -29,7 +29,7 @@
   </nav>
   <div class='container'>
   <form name="cognitivo" method="POST" action="http://localhost:8000/peoples" id="form" accept-charset="UTF-8">
-  <input name="_token" type="hidden" value="R6G7l9M6hMI1XTRX9K09wzai4E9wRg3Ik1MxWz5A">
+  <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <br><br>
       <section id="wizard">
         <div class="page-header">
@@ -445,19 +445,19 @@
                 </div>
                 <div class="form-group">
                   <p>
-                    <span class="label label-primary" style="margin-right:10px">Questão 20)</span> Sistema de Governo está relacionado ao modo como interagem o Poder Executivo e o Poder Legislativo em suas funções governamentais, ou seja, é a maneira pela qual o poder político é dividido e exercido no âmbito de um Estado. O sistema de governo varia de acordo com o grau de separação dos poderes. São sistemas de governo o Presidencialismo e o Parlamentarismo.
+                    <span class="label label-primary" style="margin-right:10px">Questão 20)</span> Segundo os conhecimentos que lhe é passado em sala de aula marque a alternativa correta que indica como Émile Durkheim concebe a sociedade:
                   </p>
                   <strong>O texto esclarece a definição e a forma de encadeamento de:</strong>
                   <br>
-                  <input id="aplicar_4" name="aplicar_4" value="5" type="radio">A) Poder politíco.
+                  <input id="aplicar_4" name="aplicar_4" value="5" type="radio">A) Como um corpo vivo, um organismo cujas partes – cada instituição e cada individuo – cumprem papeis determinados e existe em função do todo..
                   <br>
-                  <input id="aplicar_4" name="aplicar_4" value="1" type="radio">B) Sistema de governo.
+                  <input id="aplicar_4" name="aplicar_4" value="1" type="radio">B) Como um conjunto que atua por meio da racionalidade..
                   <br>
-                  <input id="aplicar_4" name="aplicar_4" value="3" type="radio">C) Poderes.
+                  <input id="aplicar_4" name="aplicar_4" value="3" type="radio">C) Como um corpo vivo, um organismo cuja a instituição cumpre papéis específicos e os indivíduos agem de forma livre.
                   <br>
-                  <input id="aplicar_4" name="aplicar_4" value="4" type="radio">D) Estados.
+                  <input id="aplicar_4" name="aplicar_4" value="4" type="radio">D) Como um corpo vivo, um organismo cujas partes – cada instituição e cada individuo – atuam de formas indeterminadas e existe em função do todo.
                   <br>
-                  <input id="aplicar_4" name="aplicar_4" value="2" type="radio">E) Poder legislatico.
+                  <input id="aplicar_4" name="aplicar_4" value="2" type="radio">E) Como um conjunto onde ambas as partes atuam tanto de formas determinadas como indeterminadas.
                 </div>
               </div>
             </div>
@@ -465,75 +465,77 @@
               <div class="panel-body">
                 <div class="form-group">
                   <p>
-                    <span class="label label-primary" style="margin-right:10px">Questão 21)</span> Segundo os conhecimentos que lhe é passado em sala de aula marque a alternativa correta que indica como Émile Durkheim concebe a sociedade:
+                    <span class="label label-primary" style="margin-right:10px">Questão 21)</span> Ao observarmos a charge, percebe-se que a maior parte da população encara a politica como politicagem ou politica partidária, essas duas ultimas que fogem totalmente do verdadeiro significado de politica. Em virtude disso o que a população deveria fazerpara eliminação desse pensamento tão contrario ao verdadeiro significado de politica:
                     <br>
                     <img src="{{asset('imagens/qt21.jpg')}}">
                     <br>
                   </p>
                   <br>
-                  <input id="criar_1" name="criar_1" value="3" type="radio">A) Como um corpo vivo, um organismo cujas partes – cada instituição e cada individuo – cumprem papeis determinados e existe em função do todo.
+                  <input id="criar_1" name="criar_1" value="3" type="radio">A) A população  não deve mais importa-se com a politica pois a mesma só interessa aos politico e não cabe intervenção por parte da população.
                   <br>
-                  <input id="criar_1" name="criar_1" value="1" type="radio">B) Como um conjunto que atua por meio da racionalidade.
+                  <input id="criar_1" name="criar_1" value="1" type="radio">B) A população deve criar uma melhor visão sobre a politicagem pois a mesma contribui bastante para o desenvolvimento do país.
                   <br>
-                  <input id="criar_1" name="criar_1" value="5" type="radio">C) Como um corpo vivo, um organismo cuja a instituição cumpre papéis específicos e os indivíduos agem de forma livre.
+                  <input id="criar_1" name="criar_1" value="5" type="radio">C) O povo deve combater esse pensamento antigo sobre a politica e passar a vê-la como um instrumento de desenvolvimento de uma nação de modo que todos devem intervir sobre ela  e não ter nojo da mesma.
                   <br>
-                  <input id="criar_1" name="criar_1" value="4" type="radio">D) Como um corpo vivo, um organismo cujas partes – cada instituição e cada individuo – atuam de formas indeterminadas e existe em função do todo.
+                  <input id="criar_1" name="criar_1" value="4" type="radio">D) O povo deve se manter neutro em relação a politica pois não a mais nada que possa ser feito para controlar a situação caótica por que passa a politica atualmente.
                   <br>
-                  <input id="criar_1" name="criar_1" value="2" type="radio">E) Como um conjunto onde ambas as partes atuam tanto de formas determinadas como indeterminadas.
+                  <input id="criar_1" name="criar_1" value="2" type="radio">E) Ter mais nojo da politica, pois a mesma é comandada por políticos corruptos que não fazem nada para melhoria e desenvolvimento.
                 </div>
                 <div class="form-group">
                   <p>
-                    <span class="label label-primary" style="margin-right:10px">Questão 22)</span> Ao observarmos a charge, percebe-se que a maior parte da população encara a politica como politicagem ou politica partidária, essas duas ultimas que fogem totalmente do verdadeiro significado de politica. Em virtude disso o que a população deveria fazerpara eliminação desse pensamento tão contrario ao verdadeiro significado de politica;
+                    <span class="label label-primary" style="margin-right:10px">Questão 22)</span> A charge mostra uma pratica ilícita ainda comum nos dias de hoje, o nepotismo, essa pratica acontece quando um politico emprega familiares em órgãos públicos, com a finalidade de beneficiar os mesmos. Sobre essa pratica qual a alternativa mais plausível:
                     <br>
                     <img src="{{asset('imagens/qt22.jpg')}}">
                     <br>
                   </p>
                   <br>
-                  <input id="criar_2" name="criar_2" value="2" type="radio">A) A população  não deve mais importa-se com a politica pois a mesma só interessa aos politico e não cabe intervenção por parte da população.
+                  <input id="criar_2" name="criar_2" value="2" type="radio">A) A pratica do nepotismo deve continuar pois ela não afeta a população de maneira alguma.
                   <br>
-                  <input id="criar_2" name="criar_2" value="5" type="radio">B) A população deve criar uma melhor visão sobre a politicagem pois a mesma contribui bastante para o desenvolvimento do país..
+                  <input id="criar_2" name="criar_2" value="5" type="radio">B) Cabe não só a justiça combater essa pratica, a população também deve contribuir para acabar com essa pratica denunciando os casos de nepotismo.
                   <br>
-                  <input id="criar_2" name="criar_2" value="3" type="radio">C) O povo deve combater esse pensamento antigo sobre a politica e passar a vê-la como um instrumento de desenvolvimento de uma nação de modo que todos devem intervir sobre ela  e não ter nojo da mesma.
+                  <input id="criar_2" name="criar_2" value="3" type="radio">C) A pratica deve continuar pois ela benéfica para as pessoas que utilizam ela gerando capital para as mesmas e contribuindo para economia do lugar.
                   <br>
-                  <input id="criar_2" name="criar_2" value="4" type="radio">D) O povo deve se manter neutro em relação a politica pois não a mais nada que possa ser feito para controlar a situação caótica por que passa a politica atualmente.
+                  <input id="criar_2" name="criar_2" value="4" type="radio">D) Deve ser encarada com normalidade, pois ainda é comum em alguns lugares.
                   <br>
-                  <input id="criar_2" name="criar_2" value="1" type="radio">E) Ter mais nojo da politica, pois a mesma é comandada por políticos corruptos que não fazem nada para melhoria e desenvolvimento.
+                  <input id="criar_2" name="criar_2" value="1" type="radio">E) Cabe não só a justiça combater essa pratica, a população também deve contribuir para acabar com a mesma aceitando subornos para calar-se diante disso.
                 </div>
                 <div class="form-group">
                   <p>
-                    <span class="label label-primary" style="margin-right:10px">Questão 23)</span> A charge mostra uma pratica ilícita ainda comum nos dias de hoje, o nepotismo, essa pratica acontece quando um politico emprega familiares em órgãos públicos, com a finalidade de beneficiar os mesmos. Sobre essa pratica qual a alternativa mais plausível:
+                    <span class="label label-primary" style="margin-right:10px">Questão 23)</span> A charge retrata a indignação de um professor de uma forma irônica sobre o baixo salario do professor. Sobre esta situação o que você faria para melhorar as condições e vida profissional do professor:
                     <br>
                     <img src="{{asset('imagens/qt23.jpg')}}">
                     <br>
                   </p>
                   <br>
-                  <input id="criar_3" name="criar_3" value="3" type="radio">A) A pratica do nepotismo deve continuar pois ela não afeta a população de maneira alguma.
+                  <input id="criar_3" name="criar_3" value="3" type="radio">A) Aumentaria os salários dos professores e diminuiria a carga horaria dos mesmos.
                   <br>
-                  <input id="criar_3" name="criar_3" value="1" type="radio">B) Cabe não só a justiça combater essa pratica, a população também deve contribuir para acabar com essa pratica denunciando os casos de nepotismo.
+                  <input id="criar_3" name="criar_3" value="1" type="radio">B) Criaria condições pros professores mudarem de profissão.
                   <br>
-                  <input id="criar_3" name="criar_3" value="4" type="radio">C) A pratica deve continuar pois ela benéfica para as pessoas que utilizam ela gerando capital para as mesmas e contribuindo para economia do lugar.
+                  <input id="criar_3" name="criar_3" value="4" type="radio">C) Criaria condições pros professores desenvolverem o seu trabalho com excelência e aumentaria seus salários.
                   <br>
-                  <input id="criar_3" name="criar_3" value="2" type="radio">D) Deve ser encarada com normalidade, pois ainda é comum em alguns lugares.
+                  <input id="criar_3" name="criar_3" value="2" type="radio">D) Diminuiria o numero de aulas dos professores.
                   <br>
-                  <input id="criar_3" name="criar_3" value="5" type="radio">E) Cabe não só a justiça combater essa pratica, a população também deve contribuir para acabar com a mesma aceitando subornos para calar-se diante disso.
+                  <input id="criar_3" name="criar_3" value="5" type="radio">E) Elaboraria um plano de carreira para os mesmos possibilitando a eles crescerem na profissão por meio de especializações, cursos e etc. além de reajustar o piso salarial da classe.
                 </div>
                 <div class="form-group">
                   <p>
-                    <span class="label label-primary" style="margin-right:10px">Questão 24)</span> A charge a seguir retrata a indignação de um professor de uma forma irônica sobre o baixo salario do professor. Sobre esta situação o que você faria para melhorar as condições e vida profissional do professor:
+                    <span class="label label-primary" style="margin-right:10px">Questão 24)</span> A imagem retrata um fato que ocorre com frequência na história do Brasil como um todo. Índios cada vez mais perdem espaços ( são expulsos ) sobre suas próprias terras.
+                    <br>
+                    <strong>O que você faria para mudar tal cenário?</strong>
                     <br>
                     <img src="{{asset('imagens/qt24.jpg')}}">
                     <br>
                   </p>
                   <br>
-                  <input id="criar_4" name="criar_4" value="1" type="radio">A) Aumentaria os salários dos professores e diminuiria a carga horaria dos mesmos.
+                  <input id="criar_4" name="criar_4" value="1" type="radio">A) Cessaria com as tomadas de terras.
                   <br>
-                  <input id="criar_4" name="criar_4" value="3" type="radio">B) Criaria condições pros professores mudarem de profissão.
+                  <input id="criar_4" name="criar_4" value="3" type="radio">B) Dividiria igualmente as terras entre índios e latifundiários.
                   <br>
                   <input id="criar_4" name="criar_4" value="5" type="radio">C) Criaria condições pros professores desenvolverem o seu trabalho com excelência e aumentaria seus salários.
                   <br>
-                  <input id="criar_4" name="criar_4" value="2" type="radio">D) Diminuiria o numero de aulas dos professores.
+                  <input id="criar_4" name="criar_4" value="2" type="radio">D) Ensinaria aos índios a se adaptarem a cidade.
                   <br>
-                  <input id="criar_4" name="criar_4" value="4" type="radio">E) Elaboraria um plano de carreira para os mesmos possibilitando a eles crescerem na profissão por meio de especializações, cursos e etc. além de reajustar o piso salarial da classe.
+                  <input id="criar_4" name="criar_4" value="4" type="radio">E) Demarcaria as terras de forma justa.
                 </div>
                 <div class="form-group">
                   <div class="col-md-6"></div>
@@ -565,7 +567,7 @@
       $('#rootwizard').bootstrapWizard({onNext: function(tab, navigation, index) {
         if(index==1) {
         // Make sure we entered the name
-        if(!$('#nome').val()) {
+        if( !$('#nome').val() ) {
           alert('O campo nome é obrigatório');
           $('#nome').focus();
           return false;
@@ -700,14 +702,57 @@
     );
     });
 
+    //valida numero inteiro com mascara
+    function mascaraInteiro(){
+      if (event.keyCode < 48 || event.keyCode > 57){
+        event.returnValue = false;
+        return false;
+      }
+      return true;
+    }
 
     //adiciona mascara ao CPF
-function MascaraCPF(cpf){
-  if(mascaraInteiro(cpf)==false){
-    event.returnValue = false;
-  }
-  return formataCampo(cpf, '000.000.000-00', event);
-}
-  </script>
+    function MascaraCPF(cpf){
+      if(mascaraInteiro(cpf)==false){
+        event.returnValue = false;
+      }
+      return formataCampo(cpf, '000.000.000-00', event);
+    }
+
+    //formata de forma generica os campos
+    function formataCampo(campo, Mascara, evento) {
+      var boleanoMascara;
+
+      var Digitato = evento.keyCode;
+      exp = /\-|\.|\/|\(|\)| /g
+      campoSoNumeros = campo.value.toString().replace( exp, "" );
+
+      var posicaoCampo = 0;
+      var NovoValorCampo="";
+      var TamanhoMascara = campoSoNumeros.length;;
+
+      if (Digitato != 8) { // backspace
+        for(i=0; i<= TamanhoMascara; i++) {
+          boleanoMascara  = ((Mascara.charAt(i) == "-") || (Mascara.charAt(i) == ".")
+            || (Mascara.charAt(i) == "/"))
+          boleanoMascara  = boleanoMascara || ((Mascara.charAt(i) == "(")
+            || (Mascara.charAt(i) == ")") || (Mascara.charAt(i) == " "))
+          if (boleanoMascara) {
+            NovoValorCampo += Mascara.charAt(i);
+            TamanhoMascara++;
+          }else {
+            NovoValorCampo += campoSoNumeros.charAt(posicaoCampo);
+            posicaoCampo++;
+          }
+        }
+        campo.value = NovoValorCampo;
+        return true;
+      }else {
+        return true;
+      }
+    }
+
+
+      </script>
 </body>
 </html>

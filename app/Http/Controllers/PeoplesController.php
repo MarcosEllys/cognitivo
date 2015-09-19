@@ -72,8 +72,9 @@ class PeoplesController extends Controller
         'criar_4' => $request['criar_4'],
         'key' => $encode
         ]);
-return "A porra deu certo e salvou";
-}
+        return "A porra deu certo e salvou";
+        // return self->result($enconde);
+        }
 
     /**
      * Display the specified resource.
