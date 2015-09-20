@@ -27,9 +27,15 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/desafio">Desafio</a></li>
-          <li><a href="/admin">Administrativo</a></li>
+          <li>
+          {!! link_to('/','Home') !!}
+          </li>
+          <li>
+          {!! link_to('/desafio','Desafio') !!}
+          </li>
+          <li>
+          {!! link_to('/admin','Administrativo') !!}
+          </li>
         </ul>
       </div>
     </div>

@@ -33,9 +33,28 @@
         <h1>Área administrativa do cognitivo</h1>
       </div>
       <div class="col-md-12">
-          @foreach ($peoples as $result)
-              <p>{{ $result }}</p>
-          @endforeach
+          <table class="table table-hover table-bordered table-condensed">
+            <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Chave</th>
+              <th>Visualizar</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach ($peoples as $result)
+              <tr>
+                <td>{{ $result->id }}</td>
+                <td>{{ $result->nome }}</td>
+                <td>{{ $result->email }}</td>
+                <td>{{ $result->key }}</td>
+                <td><a href="/resultado/{{ $result->key }}" class="btn btn-warning">Visualizar</a></td>
+              </tr>
+            @endforeach
+            </tbody>
+          </table>
 
           {{ $peoples->render() }}
 

@@ -28,7 +28,7 @@
     </div>
   </nav>
   <div class='container'>
-  <form name="cognitivo" method="POST" action="http://localhost:8000/peoples" id="form" accept-charset="UTF-8">
+  {!! Form::open(['method' => 'POST' ,'url' => '/peoples', 'name' => 'cognitivo' ,'id' => 'form']) !!}
   <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <br><br>
       <section id="wizard">
@@ -531,7 +531,7 @@
                   <br>
                   <input id="criar_4" name="criar_4" value="3" type="radio">B) Dividiria igualmente as terras entre índios e latifundiários.
                   <br>
-                  <input id="criar_4" name="criar_4" value="5" type="radio">C) Criaria condições pros professores desenvolverem o seu trabalho com excelência e aumentaria seus salários.
+                  <input id="criar_4" name="criar_4" value="5" type="radio">C) Criaria leis de demarcação de terras e de proteção aos índios.
                   <br>
                   <input id="criar_4" name="criar_4" value="2" type="radio">D) Ensinaria aos índios a se adaptarem a cidade.
                   <br>
@@ -555,7 +555,7 @@
         </div>
 
       </section>
-    </form>
+    {!! Form::close() !!}
   </div>
   <script src="{{asset('js/jquery-2.1.4.min.js')}}"></script>
   <script src="{{asset('js/prettify.js')}}"></script>

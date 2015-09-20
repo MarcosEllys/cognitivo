@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', ['as' => 'home', 'uses' => 'WelcomeController@index']);
 
-Route::get('/desafio','WelcomeController@desafio');
+Route::get('/desafio',['as' => 'desafio' , 'uses' =>'WelcomeController@desafio']);
 
 Route::post('peoples','PeoplesController@store');
 
