@@ -65,19 +65,19 @@
                   <div class="form-group">
                     <label for="nome" class="col-md-2 col-xs-12 control-label">Nome:</label>
                     <div class="col-md-10 col-xs-12">
-                      <input class="form-control" id="nome" placeholder="Nome do participante" name="nome" type="text">
+                      <input class="form-control" id="nome" autocomplete="off" placeholder="Nome do participante" name="nome" type="text">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="cpf" class="col-md-2 col-xs-12 control-label">CPF:</label>
                     <div class="col-md-10 col-xs-12">
-                      <input class="form-control" id="cpf" placeholder="CPF do participante" name="cpf" type="text" onKeyPress="MascaraCPF(cognitivo.cpf);" maxlength="14">
+                      <input class="form-control" id="cpf" autocomplete="off" placeholder="CPF do participante" name="cpf" type="text" onKeyPress="MascaraCPF(cognitivo.cpf);" maxlength="14">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="email" class="col-md-2 col-xs-12 control-label">Email:</label>
                     <div class="col-md-10 col-xs-12">
-                      <input class="form-control" id="email" placeholder="Email do participante" name="email" type="text">
+                      <input class="form-control" id="email" autocomplete="off" placeholder="Email do participante" name="email" type="text">
                     </div>
                   </div>
                 </div>
@@ -92,7 +92,7 @@
                   </p>
                   <strong>Qual a ideia principal do texto?</strong>
                   <br>
-                  <input id="compreender_1" name="compreender_1" type="radio" value="1">
+                  <input id="compreender_1" name="compreender_1" type="radio" value="1" required>
                   A) Relatar sobre os Girondino.
                   <br>
                   <input id="compreender_1" name="compreender_1" type="radio" value="3">
@@ -110,7 +110,7 @@
                   </p>
                   <strong>Com base no texto implica dizer que ele tem como objetivo principal:</strong>
                   <br>
-                  <input id="compreender_2" name="compreender_2" value="1" type="radio">A) Falar sobre os partidos políticos de hoje em dia.
+                  <input id="compreender_2" name="compreender_2" value="1" required type="radio">A) Falar sobre os partidos políticos de hoje em dia.
                   <br>
                   <input id="compreender_2" name="compreender_2" value="4" type="radio">B) Conceituar partido politico.
                   <br>
@@ -136,7 +136,7 @@
                   <br>
                   <input id="compreender_3" name="compreender_3" value="2" type="radio">D) Conceitos Sociológicos.
                   <br>
-                  <input id="compreender_3" name="compreender_3" value="1" type="radio">E) Nada.
+                  <input id="compreender_3" name="compreender_3" value="1" required type="radio">E) Nada.
                 </div>
                 <div class="form-group">
                   <p>
@@ -152,7 +152,7 @@
                   <br>
                   <input id="compreender_4" name="compreender_4" value="2" type="radio">D) Estados.
                   <br>
-                  <input id="compreender_4" name="compreender_4" value="1" type="radio">E) Poder legislatico.
+                  <input id="compreender_4" name="compreender_4" value="1" required type="radio">E) Poder legislatico.
                 </div>
               </div>
             </div>
@@ -165,13 +165,13 @@
                   </p>
                   <strong>Com base no gráfico sobre a Economia em relação ao Governo de Dilma é correto afirma que:</strong>
                   <br>
-                  <input id="avaliar_1" name="avaliar_1" value="1" type="radio">A) Foi superior aos demais.
+                  <input id="avaliar_1" name="avaliar_1" value="1" required type="radio">A) Foi superior aos demais.
                   <br>
                   <input id="avaliar_1" name="avaliar_1" value="3" type="radio">B) Foi inferior aos demais.
                   <br>
                   <input id="avaliar_1" name="avaliar_1" value="4" type="radio">C) Se manteve instável.
                   <br>
-                  <input id="avaliar_1" name="avaliar_1" value="2" type="radio">E) Está entre a média de todos.
+                  <input id="avaliar_1" name="avaliar_1" value="2" type="radio">D) Está entre a média de todos.
                   <br>
                   <input id="avaliar_1" name="avaliar_1" value="5" type="radio">E) Mostra declinio a anos anteriores.
                 </div>
@@ -181,7 +181,7 @@
                     <img src="{{asset('imagens/qt6.png')}}">
                   </p>
                   <br>
-                  <input id="avaliar_2" name="avaliar_2" value="1" type="radio">A) O ano de maior índice de geração de empregos foi 2009.
+                  <input id="avaliar_2" name="avaliar_2" value="1" required type="radio">A) O ano de maior índice de geração de empregos foi 2009.
                   <br>
                   <input id="avaliar_2" name="avaliar_2" value="2" type="radio">B) O ano de menor índice de geração de empregos foi 2012.
                   <br>
@@ -202,7 +202,7 @@
                   <br>
                   <input id="avaliar_3" name="avaliar_3" value="3" type="radio">B) Mostra que os patrões levavam os empregados amarrados para votar.
                   <br>
-                  <input id="avaliar_3" name="avaliar_3" value="1" type="radio">C) Retrata pratica do nepotismo.
+                  <input id="avaliar_3" name="avaliar_3" value="1" required type="radio">C) Retrata pratica do nepotismo.
                   <br>
                   <input id="avaliar_3" name="avaliar_3" value="4" type="radio">D) Mostra como os empregados eram maltratados.
                   <br>
@@ -217,7 +217,7 @@
                   <br>
                   <input id="avaliar_4" name="avaliar_4" value="5" type="radio">A) mostra que com o passar dos tempos os meios de comunicação de massa tornaram-se o poder com mais força para influenciar os indivíduos.
                   <br>
-                  <input id="avaliar_4" name="avaliar_4" value="1" type="radio">B) Mostra a cumplicidade entre os poderes estabelecidos na sociedade, que pode facilitar no momento de se prover benefícios aos cidadãos.
+                  <input id="avaliar_4" name="avaliar_4" value="1" required type="radio">B) Mostra a cumplicidade entre os poderes estabelecidos na sociedade, que pode facilitar no momento de se prover benefícios aos cidadãos.
                   <br>
                   <input id="avaliar_4" name="avaliar_4" value="2" type="radio">C) Demonstra a desinformação do cidadão comum, que é incapaz de reconhecer as instâncias de poder da sociedade moderna.
                   <br>
@@ -237,7 +237,7 @@
                   <br>
                   <input id="analisar_1" name="analisar_1" value="2" type="radio">A) A monogamia é uma característica geral da instituição familiar.
                   <br>
-                  <input id="analisar_1" name="analisar_1" value="1" type="radio">B) A proteção, a autoridade e o afeto são características que ocorrem apenas nas sociedades capitalistas.
+                  <input id="analisar_1" name="analisar_1" value="1" required type="radio">B) A proteção, a autoridade e o afeto são características que ocorrem apenas nas sociedades capitalistas.
                   <br>
                   <input id="analisar_1" name="analisar_1" value="3" type="radio">C) A família exerce dois tipos de socialização — primária e secundária —, sendo a segunda a mais importante.
                   <br>
@@ -250,7 +250,7 @@
                     <span class="label label-primary" style="margin-right:10px">Questão 10) Revisar sistema de pontos</span> As eleições no Brasil são noticiadas, por vezes, como a "festa da democracia". Essa expressão faz mesmo muito sentido. Devemos sempre nos lembrar que o voto direto é uma conquista muito recente. Até poucos anos atrás, por exemplo, os governadores dos estados eram indicados pelo presidente da República, não eram escolhidos pelos cidadãos. A consulta popular é a forma pela qual a população escolhe aqueles que vão compor os principais cargos dos poderes Legislativo e Executivo. Assinale a afirmativa que INDICA o nome dessa forma de organização do Estado.
                   </p>
                   <br>
-                  <input id="analisar_2" name="analisar_2" value="1" type="radio">A) Democracia direta.
+                  <input id="analisar_2" name="analisar_2" value="1" required type="radio">A) Democracia direta.
                   <br>
                   <input id="analisar_2" name="analisar_2" value="5" type="radio">B) Democracia representativa.
                   <br>
@@ -258,7 +258,7 @@
                   <br>
                   <input id="analisar_2" name="analisar_2" value="3" type="radio">D) Democracia deliberativa.
                   <br>
-                  <input id="analisar_2" name="analisar_2" value="1" type="radio">E) Ditadura popular.
+                  <input id="analisar_2" name="analisar_2" value="1" required type="radio">E) Ditadura popular.
                 </div>
                 <div class="form-group">
                   <p>
@@ -275,7 +275,7 @@
                   <br>
                   <input id="analisar_3" name="analisar_3" value="3" type="radio">B) V F V.
                   <br>
-                  <input id="analisar_3" name="analisar_3" value="1" type="radio">C) V F F.
+                  <input id="analisar_3" name="analisar_3" value="1" required type="radio">C) V F F.
                   <br>
                   <input id="analisar_3" name="analisar_3" value="5" type="radio">D) F V V.
                   <br>
@@ -298,13 +298,13 @@
                   </p>
                   <strong>Pelos dados revelados em ambos os textos é correto afirma que eles:</strong>
                   <br>
-                  <input id="analisar_4" name="analisar_4" value="1" type="radio">A) São concordantes.
+                  <input id="analisar_4" name="analisar_4" value="1" required type="radio">A) São concordantes.
                   <br>
                   <input id="analisar_4" name="analisar_4" value="5" type="radio">B) São contraditórios.
                   <br>
                   <input id="analisar_4" name="analisar_4" value="4" type="radio">C) São semelhantes.
                   <br>
-                  <input id="analisar_4" name="analisar_4" value="1" type="radio">D) Todas as alternativas.
+                  <input id="analisar_4" name="analisar_4" value="1" required type="radio">D) Todas as alternativas.
                   <br>
                   <input id="analisar_4" name="analisar_4" value="2" type="radio">E) Nenhuma das alternativas.
                 </div>
@@ -342,7 +342,7 @@
                   <br>
                   <input id="memorizar_1" name="memorizar_1" value="4" type="radio">D) 1954 ~ 1985.
                   <br>
-                  <input id="memorizar_1" name="memorizar_1" value="1" type="radio">E) 2000 ~ 2015.
+                  <input id="memorizar_1" name="memorizar_1" value="1" required type="radio">E) 2000 ~ 2015.
                 </div>
                 <div class="form-group">
                   <p>
@@ -361,7 +361,7 @@
                   <br>
                   <input id="memorizar_2" name="memorizar_2" value="4" type="radio">D) Petição.
                   <br>
-                  <input id="memorizar_2" name="memorizar_2" value="1" type="radio">E) Nepotismo.
+                  <input id="memorizar_2" name="memorizar_2" value="1" required type="radio">E) Nepotismo.
                 </div>
                 <div class="form-group">
                   <p>
@@ -377,7 +377,7 @@
                   <br>
                   <input id="memorizar_3" name="memorizar_3" value="5" type="radio">D) Nacionalismo, Soberania e Cidadania.
                   <br>
-                  <input id="memorizar_3" name="memorizar_3" value="1" type="radio">E) Cidadania, Corrupção e Prefeitos.
+                  <input id="memorizar_3" name="memorizar_3" value="1" required type="radio">E) Cidadania, Corrupção e Prefeitos.
                 </div>
                 <div class="form-group">
                   <p>
@@ -392,7 +392,7 @@
                   <br>
                   <input id="memorizar_4" name="memorizar_4" value="2" type="radio">D) Determinado território controlado por um Governo.
                   <br>
-                  <input id="memorizar_4" name="memorizar_4" value="1" type="radio">E) Estados Brasileiros.
+                  <input id="memorizar_4" name="memorizar_4" value="1" required type="radio">E) Estados Brasileiros.
                 </div>
               </div>
             </div>
@@ -407,7 +407,7 @@
                   <br>
                   <input id="aplicar_1" name="aplicar_1" value="2" type="radio">B) Estamentos, Burguesia e Proletariado.
                   <br>
-                  <input id="aplicar_1" name="aplicar_1" value="1" type="radio">C) Nobreza, Xátrias e Brâmanes.
+                  <input id="aplicar_1" name="aplicar_1" value="1" required type="radio">C) Nobreza, Xátrias e Brâmanes.
                   <br>
                   <input id="aplicar_1" name="aplicar_1" value="3" type="radio">D) Castas, Nobreza e Clero.
                   <br>
@@ -420,7 +420,7 @@
                   <br>
                   <input id="aplicar_2" name="aplicar_2" value="4" type="radio">A) Executivo, Distributivo e Legislativo.
                   <br>
-                  <input id="aplicar_2" name="aplicar_2" value="1" type="radio">B) Prefeitura municipal, Governo do estado e Governo federal.
+                  <input id="aplicar_2" name="aplicar_2" value="1" required type="radio">B) Prefeitura municipal, Governo do estado e Governo federal.
                   <br>
                   <input id="aplicar_2" name="aplicar_2" value="3" type="radio">C) Governo Federal, Senado Federal e Câmara dos deputados.
                   <br>
@@ -441,7 +441,7 @@
                   <br>
                   <input id="aplicar_3" name="aplicar_3" value="3" type="radio">D) Instituição racional-legal responsável pela manutenção da ordem.
                   <br>
-                  <input id="aplicar_3" name="aplicar_3" value="1" type="radio">E) Instituição que realiza a universalização do espírito racional.
+                  <input id="aplicar_3" name="aplicar_3" value="1" required type="radio">E) Instituição que realiza a universalização do espírito racional.
                 </div>
                 <div class="form-group">
                   <p>
@@ -451,7 +451,7 @@
                   <br>
                   <input id="aplicar_4" name="aplicar_4" value="5" type="radio">A) Como um corpo vivo, um organismo cujas partes – cada instituição e cada individuo – cumprem papeis determinados e existe em função do todo..
                   <br>
-                  <input id="aplicar_4" name="aplicar_4" value="1" type="radio">B) Como um conjunto que atua por meio da racionalidade..
+                  <input id="aplicar_4" name="aplicar_4" value="1" required type="radio">B) Como um conjunto que atua por meio da racionalidade..
                   <br>
                   <input id="aplicar_4" name="aplicar_4" value="3" type="radio">C) Como um corpo vivo, um organismo cuja a instituição cumpre papéis específicos e os indivíduos agem de forma livre.
                   <br>
@@ -473,7 +473,7 @@
                   <br>
                   <input id="criar_1" name="criar_1" value="3" type="radio">A) A população  não deve mais importa-se com a politica pois a mesma só interessa aos politico e não cabe intervenção por parte da população.
                   <br>
-                  <input id="criar_1" name="criar_1" value="1" type="radio">B) A população deve criar uma melhor visão sobre a politicagem pois a mesma contribui bastante para o desenvolvimento do país.
+                  <input id="criar_1" name="criar_1" value="1" required type="radio">B) A população deve criar uma melhor visão sobre a politicagem pois a mesma contribui bastante para o desenvolvimento do país.
                   <br>
                   <input id="criar_1" name="criar_1" value="5" type="radio">C) O povo deve combater esse pensamento antigo sobre a politica e passar a vê-la como um instrumento de desenvolvimento de uma nação de modo que todos devem intervir sobre ela  e não ter nojo da mesma.
                   <br>
@@ -497,7 +497,7 @@
                   <br>
                   <input id="criar_2" name="criar_2" value="4" type="radio">D) Deve ser encarada com normalidade, pois ainda é comum em alguns lugares.
                   <br>
-                  <input id="criar_2" name="criar_2" value="1" type="radio">E) Cabe não só a justiça combater essa pratica, a população também deve contribuir para acabar com a mesma aceitando subornos para calar-se diante disso.
+                  <input id="criar_2" name="criar_2" value="1" required type="radio">E) Cabe não só a justiça combater essa pratica, a população também deve contribuir para acabar com a mesma aceitando subornos para calar-se diante disso.
                 </div>
                 <div class="form-group">
                   <p>
@@ -509,7 +509,7 @@
                   <br>
                   <input id="criar_3" name="criar_3" value="3" type="radio">A) Aumentaria os salários dos professores e diminuiria a carga horaria dos mesmos.
                   <br>
-                  <input id="criar_3" name="criar_3" value="1" type="radio">B) Criaria condições pros professores mudarem de profissão.
+                  <input id="criar_3" name="criar_3" value="1" required type="radio">B) Criaria condições pros professores mudarem de profissão.
                   <br>
                   <input id="criar_3" name="criar_3" value="4" type="radio">C) Criaria condições pros professores desenvolverem o seu trabalho com excelência e aumentaria seus salários.
                   <br>
@@ -527,7 +527,7 @@
                     <br>
                   </p>
                   <br>
-                  <input id="criar_4" name="criar_4" value="1" type="radio">A) Cessaria com as tomadas de terras.
+                  <input id="criar_4" name="criar_4" value="1" required type="radio">A) Cessaria com as tomadas de terras.
                   <br>
                   <input id="criar_4" name="criar_4" value="3" type="radio">B) Dividiria igualmente as terras entre índios e latifundiários.
                   <br>
@@ -572,8 +572,13 @@
           $('#nome').focus();
           return false;
         }
-        if(!$('#cpf').val()) {
-          alert('O campo cpf é obrigatório');
+        if( !$('#cpf').val() ) {
+          alert('O campo CPF é obrigatório');
+          $('#cpf').focus();
+          return false;
+        }
+        if( $('#cpf').val().length < 14 || $('#cpf').val().length > 14 ){
+          alert('CPF inválido');
           $('#cpf').focus();
           return false;
         }

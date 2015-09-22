@@ -31,6 +31,7 @@
     <form name="cognitivo" method="POST" action="http://localhost:8000/peoples" id="form" accept-charset="UTF-8">
       <input name="_token" type="hidden" value="R6G7l9M6hMI1XTRX9K09wzai4E9wRg3Ik1MxWz5A">
       <br><br>
+
       <section>
         @if (count($pesquisa) === 1)
         <div class="page-header">
@@ -54,26 +55,27 @@
 
           <div class="form-group">
 
+            <label class="control-label col-md-2">Email::</label>
+            <div class="col-md-4">
+              <p class="form-control-static">{{$pesquisa[0]->email}}</p>
+            </div>
             <label class="control-label col-md-2">Compreender:</label>
             <div class="col-md-4">
               <p class="form-control-static">{{$pesquisa[0]->compreender_total}}</p>
             </div>
-            <label class="control-label col-md-2">Avaliar:</label>
-            <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->nome}}</p>
-            </div>
+
 
           </div>
 
           <div class="form-group">
 
-            <label class="control-label col-md-2">Analisar:</label>
-            <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->analisar_total}}</p>
-            </div>
             <label class="control-label col-md-2">Avaliar:</label>
             <div class="col-md-4">
               <p class="form-control-static">{{$pesquisa[0]->avaliar_total}}</p>
+            </div>
+            <label class="control-label col-md-2">Analisar:</label>
+            <div class="col-md-4">
+              <p class="form-control-static">{{$pesquisa[0]->analisar_total}}</p>
             </div>
 
           </div>
@@ -82,48 +84,52 @@
 
             <label class="control-label col-md-2">Memorizar:</label>
             <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->analisar_total}}</p>
+              <p class="form-control-static">{{$pesquisa[0]->memorizar_total}}</p>
             </div>
             <label class="control-label col-md-2">Aplicar:</label>
             <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->avaliar_total}}</p>
+              <p class="form-control-static">{{$pesquisa[0]->aplicar_total}}</p>
             </div>
 
           </div>
 
           <div class="form-group">
 
-            <label class="control-label col-md-2">Criar:</larbel>
+            <label class="control-label col-md-2">Criar:</label>
             <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->analisar_total}}</p>
+              <p class="form-control-static">{{$pesquisa[0]->criar_total}}</p>
+            </div>
+            <label class="control-label col-md-2">Criar:</label>
+            <div class="col-md-4">
+              <p class="form-control-static">{{$pesquisa[0]->criar_total}}</p>
+            </div>
+
             </div>
 
           </div>
 
-        </div>
-
-        @else
-        <div class="page-header">
-          <div class="alert alert-warning alert-dismissible fade in" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <strong>Nenhum registro foi encontrado!</strong>
+          @else
+          <div class="page-header">
+            <div class="alert alert-warning alert-dismissible fade in" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <strong>Nenhum registro foi encontrado!</strong>
+            </div>
           </div>
-        </div>
 
-        <a class="btn btn-default btn-block btn-lg" onclick="javascript:redirect()"><span class="glyphicon glyphicon-arrow-left"></span> Voltar para a home</a>
-        @endif
+          <a class="btn btn-default btn-block btn-lg" onclick="javascript:redirect()"><span class="glyphicon glyphicon-arrow-left"></span> Voltar para a home</a>
+          @endif
 
-      </section>
-    </form>
-  </div>
-  <script>
-    function redirect(){
-      window.location = window.location.origin;
-    }
-  </script>
-  <script src="{{asset('js/jquery-2.1.4.min.js')}}"></script>
-  <script src="{{asset('js/prettify.js')}}"></script>
-  <script src="{{asset('js/bootstrap.min.js')}}"></script>
+        </section>
+      </form>
+    </div>
+    <script>
+      function redirect(){
+        window.location = window.location.origin;
+      }
+    </script>
+    <script src="{{asset('js/jquery-2.1.4.min.js')}}"></script>
+    <script src="{{asset('js/prettify.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
-</body>
-</html>
+  </body>
+  </html>

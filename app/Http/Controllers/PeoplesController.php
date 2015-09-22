@@ -39,8 +39,9 @@ class PeoplesController extends Controller
      */
     public function store(Request $request)
     {
-      $encode = $request['nome']+$request['cpf']+date('Y-m-d H:i:s');
-      $encode = md5($encode);
+
+      $encode = md5(uniqid(rand(), true));
+
       \App\People::create([
         'nome' => $request['nome'],
         'email' => $request['email'],
@@ -72,9 +73,8 @@ class PeoplesController extends Controller
         'criar_4' => $request['criar_4'],
         'key' => $encode
         ]);
-        return "A porra deu certo e salvou";
-        // return self->result($enconde);
-        }
+      return self::result($encode);
+      }
 
     /**
      * Display the specified resource.
@@ -90,10 +90,40 @@ class PeoplesController extends Controller
     public function result($key)
     {
       $pesquisa = \App\People::where('key','=',$key)->get();
-
+      $pesquisa[0]->compreender_total = self::calculaToal($pesquisa[0]->compreender_1, $pesquisa[0]->compreender_2, $pesquisa[0]->compreender_3, $pesquisa[0]->compreender_4);
+      $pesquisa[0]->avaliar_total = self::calculaToal($pesquisa[0]->compreender_1, $pesquisa[0]->compreender_2, $pesquisa[0]->compreender_3, $pesquisa[0]->compreender_4);
+      $pesquisa[0]->analisar_total = self::calculaToal($pesquisa[0]->compreender_1, $pesquisa[0]->compreender_2, $pesquisa[0]->compreender_3, $pesquisa[0]->compreender_4);
+      $pesquisa[0]->memorizar_total = self::calculaToal($pesquisa[0]->compreender_1, $pesquisa[0]->compreender_2, $pesquisa[0]->compreender_3, $pesquisa[0]->compreender_4);
+      $pesquisa[0]->aplicar_total = self::calculaToal($pesquisa[0]->compreender_1, $pesquisa[0]->compreender_2, $pesquisa[0]->compreender_3, $pesquisa[0]->compreender_4);
+      $pesquisa[0]->criar_total = self::calculaToal($pesquisa[0]->compreender_1, $pesquisa[0]->compreender_2, $pesquisa[0]->compreender_3, $pesquisa[0]->compreender_4);
 
       return view('resultado')->withPesquisa($pesquisa);
 
+    }
+
+    public function calculaToal($qt1, $qt2, $qt3, $qt4) {
+
+      $results = [$qt1, $qt2, $qt3, $qt4];
+      $total = 0;
+
+      for ($i=0; $i < 4 ; $i++) {
+        if ($results[$i] == 1) {
+          $total += 5;
+        }
+        if ($results[$i] == 2) {
+          $total += 10;
+        }
+        if ($results[$i] == 3) {
+          $total += 15;
+        }
+        if ($results[$i] == 4) {
+          $total += 20;
+        }
+        if ($results[$i] == 5) {
+          $total += 25;
+        }
+      };
+      return $total;
     }
 
     /**
