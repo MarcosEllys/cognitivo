@@ -20,16 +20,21 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/desafio">Desafio</a></li>
-          <li><a href="/admin">Administrativo</a></li>
+          <li>
+          {!! link_to('/','Home') !!}
+          </li>
+          <li>
+          {!! link_to('/desafio','Desafio') !!}
+          </li>
+          <li>
+          {!! link_to('/admin','Administrativo') !!}
+          </li>
         </ul>
       </div>
     </div>
   </nav>
   <div class='container'>
-    <form name="cognitivo" method="POST" action="http://localhost:8000/peoples" id="form" accept-charset="UTF-8">
-      <input name="_token" type="hidden" value="R6G7l9M6hMI1XTRX9K09wzai4E9wRg3Ik1MxWz5A">
+    <form id="form" accept-charset="UTF-8">
       <br><br>
 
       <section>
@@ -44,11 +49,11 @@
 
             <label class="control-label col-md-2">Chave:</label>
             <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->key}}</p>
+              <p class="form-control-static" data-toggle="tooltip" data-placement="top" title="Guarde esse código para consultar o seu teste sempre que quiser">{!! $pesquisa[0]->key !!}</p>
             </div>
             <label class="control-label col-md-2">Nome:</label>
             <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->nome}}</p>
+              <p class="form-control-static">{!! $pesquisa[0]->nome !!}</p>
             </div>
 
           </div>
@@ -57,51 +62,87 @@
 
             <label class="control-label col-md-2">Email::</label>
             <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->email}}</p>
+              <p class="form-control-static">{!! $pesquisa[0]->email !!}</p>
             </div>
+            <label class="control-label col-md-2">Data do teste:</label>
+            <div class="col-md-4">
+              <p class="form-control-static">{!! $pesquisa[0]->created_at !!}</p>
+            </div>
+
+          </div>
+
+          <div class="form-group">
+
             <label class="control-label col-md-2">Compreender:</label>
             <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->compreender_total}}</p>
+              <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="{!! $pesquisa[0]->compreender_total !!}" aria-valuemin="0" aria-valuemax="100" style="width: {!! $pesquisa[0]->compreender_total !!}%;">
+                  {!! $pesquisa[0]->compreender_total !!}%
+                </div>
+              </div>
             </div>
-
-
-          </div>
-
-          <div class="form-group">
-
             <label class="control-label col-md-2">Avaliar:</label>
             <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->avaliar_total}}</p>
+              <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="{!! $pesquisa[0]->avaliar_total !!}" aria-valuemin="0" aria-valuemax="100" style="width: {!! $pesquisa[0]->avaliar_total !!}%;">
+                  {!! $pesquisa[0]->avaliar_total !!}%
+                </div>
+              </div>
             </div>
+
+          </div>
+
+          <div class="form-group">
+
             <label class="control-label col-md-2">Analisar:</label>
             <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->analisar_total}}</p>
+              <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="{!! $pesquisa[0]->analisar_total !!}" aria-valuemin="0" aria-valuemax="100" style="width: {!! $pesquisa[0]->analisar_total !!}%;">
+                  {!! $pesquisa[0]->analisar_total !!}%
+                </div>
+              </div>
             </div>
-
-          </div>
-
-          <div class="form-group">
-
             <label class="control-label col-md-2">Memorizar:</label>
             <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->memorizar_total}}</p>
-            </div>
-            <label class="control-label col-md-2">Aplicar:</label>
-            <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->aplicar_total}}</p>
+              <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="{!! $pesquisa[0]->memorizar_total !!}" aria-valuemin="0" aria-valuemax="100" style="width: {!! $pesquisa[0]->memorizar_total !!}%;">
+                  {!! $pesquisa[0]->memorizar_total !!}%
+                </div>
+              </div>
             </div>
 
           </div>
 
           <div class="form-group">
 
-            <label class="control-label col-md-2">Criar:</label>
+            <label class="control-label col-md-2">Aplicar:</label>
             <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->criar_total}}</p>
+              <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="{!! $pesquisa[0]->memorizar_total !!}" aria-valuemin="0" aria-valuemax="100" style="width: {!! $pesquisa[0]->memorizar_total !!}%;">
+                  {!! $pesquisa[0]->memorizar_total !!}%
+                </div>
+              </div>
             </div>
             <label class="control-label col-md-2">Criar:</label>
             <div class="col-md-4">
-              <p class="form-control-static">{{$pesquisa[0]->criar_total}}</p>
+              <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="{!! $pesquisa[0]->memorizar_total !!}" aria-valuemin="0" aria-valuemax="100" style="width: {!! $pesquisa[0]->memorizar_total !!}%;">
+                  {!! $pesquisa[0]->memorizar_total !!}%
+                </div>
+              </div>
+            </div>
+
+            </div>
+
+            <div class="form-group">
+
+              <label class="control-label col-md-2">Criar:</label>
+              <div class="col-md-4">
+              <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="{!! $pesquisa[0]->memorizar_total !!}" aria-valuemin="0" aria-valuemax="100" style="width: {!! $pesquisa[0]->memorizar_total !!}%;">
+                  {!! $pesquisa[0]->memorizar_total !!}%
+                </div>
+              </div>
             </div>
 
             </div>

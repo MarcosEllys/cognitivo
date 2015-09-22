@@ -91,11 +91,11 @@ class PeoplesController extends Controller
     {
       $pesquisa = \App\People::where('key','=',$key)->get();
       $pesquisa[0]->compreender_total = self::calculaToal($pesquisa[0]->compreender_1, $pesquisa[0]->compreender_2, $pesquisa[0]->compreender_3, $pesquisa[0]->compreender_4);
-      $pesquisa[0]->avaliar_total = self::calculaToal($pesquisa[0]->compreender_1, $pesquisa[0]->compreender_2, $pesquisa[0]->compreender_3, $pesquisa[0]->compreender_4);
-      $pesquisa[0]->analisar_total = self::calculaToal($pesquisa[0]->compreender_1, $pesquisa[0]->compreender_2, $pesquisa[0]->compreender_3, $pesquisa[0]->compreender_4);
-      $pesquisa[0]->memorizar_total = self::calculaToal($pesquisa[0]->compreender_1, $pesquisa[0]->compreender_2, $pesquisa[0]->compreender_3, $pesquisa[0]->compreender_4);
-      $pesquisa[0]->aplicar_total = self::calculaToal($pesquisa[0]->compreender_1, $pesquisa[0]->compreender_2, $pesquisa[0]->compreender_3, $pesquisa[0]->compreender_4);
-      $pesquisa[0]->criar_total = self::calculaToal($pesquisa[0]->compreender_1, $pesquisa[0]->compreender_2, $pesquisa[0]->compreender_3, $pesquisa[0]->compreender_4);
+      $pesquisa[0]->avaliar_total = self::calculaToal($pesquisa[0]->avaliar_1, $pesquisa[0]->avaliar_2, $pesquisa[0]->avaliar_3, $pesquisa[0]->avaliar_4);
+      $pesquisa[0]->analisar_total = self::calculaToal($pesquisa[0]->analisar_1, $pesquisa[0]->analisar_2, $pesquisa[0]->analisar_3, $pesquisa[0]->analisar_4);
+      $pesquisa[0]->memorizar_total = self::calculaToal($pesquisa[0]->memorizar_1, $pesquisa[0]->memorizar_2, $pesquisa[0]->memorizar_3, $pesquisa[0]->memorizar_4);
+      $pesquisa[0]->aplicar_total = self::calculaToal($pesquisa[0]->aplicar_1, $pesquisa[0]->aplicar_2, $pesquisa[0]->aplicar_3, $pesquisa[0]->aplicar_4);
+      $pesquisa[0]->criar_total = self::calculaToal($pesquisa[0]->criar_1, $pesquisa[0]->criar_2, $pesquisa[0]->criar_3, $pesquisa[0]->criar_4);
 
       return view('resultado')->withPesquisa($pesquisa);
 
